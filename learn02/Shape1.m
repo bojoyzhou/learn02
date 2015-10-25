@@ -7,6 +7,7 @@
 //
 
 #import "Shape1.h"
+#import "LineGround.h"
 
 @implementation Shape1
 
@@ -30,27 +31,47 @@
 }
 
 -(void)moveUp {
-    for (BJRect * r in self.rects) {
-        r.y--;
-        [r draw];
+    if([LineGround canLocate:self] == NO){
+        for (BJRect * r in self.rects) {
+            r.y++;
+        }
+    }else{
+        for (BJRect * r in self.rects) {
+            [r draw];
+        }
     }
 }
 -(void)moveDown {
-    for (BJRect * r in self.rects) {
-        r.y++;
-        [r draw];
+    if([LineGround canLocate:self] == NO){
+        for (BJRect * r in self.rects) {
+            r.y--;
+        }
+    }else{
+        for (BJRect * r in self.rects) {
+            [r draw];
+        }
     }
 }
 -(void)moveLeft {
-    for (BJRect * r in self.rects) {
-        r.x--;
-        [r draw];
+    if([LineGround canLocate:self] == NO){
+        for (BJRect * r in self.rects) {
+            r.x--;
+        }
+    }else{
+        for (BJRect * r in self.rects) {
+            [r draw];
+        }
     }
 }
 -(void)moveRight {
-    for (BJRect * r in self.rects) {
-        r.x++;
-        [r draw];
+    if([LineGround canLocate:self] == NO){
+        for (BJRect * r in self.rects) {
+            r.x++;
+        }
+    }else{
+        for (BJRect * r in self.rects) {
+            [r draw];
+        }
     }
 }
 

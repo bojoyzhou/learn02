@@ -10,6 +10,8 @@
 
 @implementation Shape
 
+@synthesize rects;
+
 -(void)draw{};
 -(void)moveUp{};
 -(void)moveDown{};

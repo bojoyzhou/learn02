@@ -7,33 +7,56 @@
 //
 
 #import "LineGround.h"
-
+#import "BJRect.h"
+static int _size, _width, _height, _column, _rows;
 @implementation LineGround
 
-@synthesize size, view, width, height;
+@synthesize view;
 
 +(LineGround *) initWithSize:(int)size initWithView:(UIView *)view initWithWidth:(int)width initWithHeight:(int)height {
     LineGround * lg = [LineGround new];
-    lg.size = size;
     lg.view = view;
-    lg.width = width;
-    lg.height = height;
+    
+    _size = size;
+    _width = width;
+    _height = height;
+    _column = width/size;
+    _rows = height/size;
     return lg;
+}
+
++(BOOL) canLocate:(Shape *)s {
+    for (BJRect * r in s.rects) {
+        if([LineGround canLocateRect:r] == NO) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
++(BOOL) canLocateRect:(BJRect *)r {
+    if(r.x < 0 || r.x >= _column){
+        return NO;
+    }
+    if(r.y < 0 || r.y >= _rows){
+        return NO;
+    }
+    return YES;
 }
 
 -(void)draw {
     int i = 0;
     int y = 0;
-    int det = self.size;
+    int det = _size;
     CGPoint startPoint, endPoint;
     for (i = 0; i <= 10; i++) {
         startPoint = CGPointMake(i * det, 0);
-        endPoint = CGPointMake(i * det, self.height);
+        endPoint = CGPointMake(i * det, _height);
         [self makeLine:startPoint endWith:endPoint];
     }
     for (y = self.height; y >= 0; y -= det) {
         startPoint = CGPointMake(0, y);
-        endPoint = CGPointMake(self.width, y);
+        endPoint = CGPointMake(_width, y);
         [self makeLine:startPoint endWith:endPoint];
     }
 }

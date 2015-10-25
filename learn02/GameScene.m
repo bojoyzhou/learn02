@@ -29,14 +29,15 @@
     int height = rect.size.height;
     int size = width / 10;
     LineGround * lg = [LineGround initWithSize:size initWithView:view initWithWidth:width initWithHeight:height];
+    NSLog(@"lg draw");
     [lg draw];
-    Shape1 *shape1 = [Shape1 new];
-    [shape1 initWithX:0 initWithY:0 initWithSize:size initWithView:self.view];
-    
-    [shape1 draw];
-    
-    CADisplayLink * link = [CADisplayLink displayLinkWithTarget:shape1 selector:@selector(moveDown)];
-    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+//    Shape1 *shape1 = [Shape1 new];
+//    [shape1 initWithX:0 initWithY:0 initWithSize:size initWithView:self.view];
+//    
+//    [shape1 draw];
+//    
+//    CADisplayLink * link = [CADisplayLink displayLinkWithTarget:shape1 selector:@selector(moveDown)];
+//    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
 //    BJRect *bjrect = [BJRect initWithSize:size initWithX:0 initWithY:0 initWithView:self.view];
 //    [bjrect draw];

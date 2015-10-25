@@ -14,7 +14,6 @@
 + (instancetype)unarchiveFromFile:(NSString *)file {
     /* Retrieve scene file path from the application bundle */
     NSString *nodePath = [[NSBundle mainBundle] pathForResource:file ofType:@"sks"];
-    NSLog(@"%@", nodePath);
     /* Unarchive the file to an SKScene object */
     NSData *data = [NSData dataWithContentsOfFile:nodePath
                                           options:NSDataReadingMappedIfSafe
@@ -22,7 +21,6 @@
     NSKeyedUnarchiver *arch = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
     [arch setClass:self forClassName:@"SKScene"];
     SKScene *scene = [arch decodeObjectForKey:NSKeyedArchiveRootObjectKey];
-    NSLog(@"arch decodeObjectForKey");
     [arch finishDecoding];
     
     return scene;
@@ -35,7 +33,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"game view controller view did load");
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "Shape.h"
 
 @interface LineGround : NSObject
 
@@ -15,6 +16,7 @@
 @property UIView * view;
 
 +(LineGround *) initWithSize:(int)size initWithView:(UIView *)view initWithWidth:(int)width initWithHeight:(int)height;
++(BOOL) canLocate:(Shape *)r;
 -(void)draw;
 
 @end

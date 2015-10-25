@@ -10,6 +10,8 @@
 
 @interface Shape : NSObject
 
+@property NSArray * rects;
+
 -(void)draw;
 -(void)moveUp;
 -(void)moveDown;
