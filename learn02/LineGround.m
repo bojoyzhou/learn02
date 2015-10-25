@@ -8,10 +8,13 @@
 
 #import "LineGround.h"
 #import "BJRect.h"
-static int _size, _width, _height, _column, _rows;
+
+
 @implementation LineGround
 
 @synthesize view;
+
+static int _size = 0, _width = 0, _height = 0, _column = 0, _rows = 0;
 
 +(LineGround *) initWithSize:(int)size initWithView:(UIView *)view initWithWidth:(int)width initWithHeight:(int)height {
     LineGround * lg = [LineGround new];
@@ -54,7 +57,7 @@ static int _size, _width, _height, _column, _rows;
         endPoint = CGPointMake(i * det, _height);
         [self makeLine:startPoint endWith:endPoint];
     }
-    for (y = self.height; y >= 0; y -= det) {
+    for (y = _height; y >= 0; y -= det) {
         startPoint = CGPointMake(0, y);
         endPoint = CGPointMake(_width, y);
         [self makeLine:startPoint endWith:endPoint];
@@ -75,6 +78,6 @@ static int _size, _width, _height, _column, _rows;
     layer.path = path.CGPath;
     
     [self.view.layer addSublayer:layer];
-//    NSLog(@"add sub layer startPoint [%f, %f] endPoint [%f, %f]", startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+    NSLog(@"add sub layer startPoint [%f, %f] endPoint [%f, %f]", startPoint.x, startPoint.y, endPoint.x, endPoint.y);
 }
 @end
