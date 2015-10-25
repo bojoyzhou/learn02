@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "LineGround.h"
 #import "BJRect.h"
 #import "Shape1.h"
 
@@ -26,48 +27,21 @@
     CGRect rect = [UIScreen mainScreen].bounds;
     int width = rect.size.width;
     int height = rect.size.height;
-    int det = width / 10;
-    int i = 0;
-    int y = 0;
-    for (i = 0; i <= 10; i++) {
-        CGPoint startPoint = CGPointMake(i * det, 0);
-        CGPoint endPoint = CGPointMake(i * det, height);
-        [self makeLine:startPoint endWith:endPoint];
-    }
-    for (y = height; y >= 0; y -= det) {
-        CGPoint startPoint = CGPointMake(0, y);
-        CGPoint endPoint = CGPointMake(width, y);
-        [self makeLine:startPoint endWith:endPoint];
-    }
-    
+    int size = width / 10;
+    LineGround * lg = [LineGround initWithSize:size initWithView:view initWithWidth:width initWithHeight:height];
+    [lg draw];
     Shape1 *shape1 = [Shape1 new];
-    [shape1 initWithX:0 initWithY:0 initWithSize:det initWithView:self.view];
+    [shape1 initWithX:0 initWithY:0 initWithSize:size initWithView:self.view];
     
     [shape1 draw];
     
     CADisplayLink * link = [CADisplayLink displayLinkWithTarget:shape1 selector:@selector(moveDown)];
     [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
-//    BJRect *bjrect = [BJRect initWithSize:det initWithX:0 initWithY:0 initWithView:self.view];
+//    BJRect *bjrect = [BJRect initWithSize:size initWithX:0 initWithY:0 initWithView:self.view];
 //    [bjrect draw];
 }
 
--(void)makeLine:(CGPoint) startPoint endWith:(CGPoint) endPoint {
-    CAShapeLayer * layer = [CAShapeLayer layer];
-    layer.fillColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2].CGColor;
-    layer.strokeColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5].CGColor;
-    layer.frame = self.view.frame;
-    layer.lineWidth = 1;
-    
-    UIBezierPath * path = [UIBezierPath bezierPath];
-    [path moveToPoint:startPoint];
-    [path addLineToPoint:endPoint];
-    
-    layer.path = path.CGPath;
-    
-    [self.view.layer addSublayer:layer];
-    NSLog(@"add sub layer startPoint [%f, %f] endPoint [%f, %f]", startPoint.x, startPoint.y, endPoint.x, endPoint.y);
-}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */

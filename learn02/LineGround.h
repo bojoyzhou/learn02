@@ -11,7 +11,10 @@
 
 @interface LineGround : NSObject
 
-+(LineGround *) initWithSize:(int)size initWithView:(UIView *)view;
+@property int size, width, height;
+@property UIView * view;
+
++(LineGround *) initWithSize:(int)size initWithView:(UIView *)view initWithWidth:(int)width initWithHeight:(int)height;
 -(void)draw;
 
 @end

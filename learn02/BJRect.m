@@ -19,14 +19,11 @@
     bjrect.x = x;
     bjrect.y = y;
     bjrect.layer = nil;
-    
-    NSLog(@"bjrect init [%d, %d, %d]", x, y, size);
     return bjrect;
 }
 
 -(void)draw {
     [self.layer removeFromSuperlayer];
-    NSLog(@"bjrect draw");
     UIBezierPath * path = [UIBezierPath bezierPath];
     CGPoint startPoint = CGPointMake(self.x * self.size, self.y * self.size);
     CGPoint endPoint = CGPointMake(startPoint.x + self.size, startPoint.y);
