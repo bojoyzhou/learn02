@@ -10,8 +10,10 @@
 
 @implementation Shape
 
--(void) draw {
-    
-}
+-(void)draw{};
+-(void)moveUp{};
+-(void)moveDown{};
+-(void)moveLeft{};
+-(void)moveRight{};
 
 @end

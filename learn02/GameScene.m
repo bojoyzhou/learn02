@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "BJRect.h"
+#import "Shape1.h"
 
 @implementation GameScene
 
@@ -39,9 +40,16 @@
         [self makeLine:startPoint endWith:endPoint];
     }
     
-//    BJRect *bjrect = [BJRect initWithSize:width initWithX:0 initWithY:0 initWithLayer:layer];
+    Shape1 *shape1 = [Shape1 new];
+    [shape1 initWithX:0 initWithY:0 initWithSize:det initWithView:self.view];
+    
+    [shape1 draw];
+    
+    CADisplayLink * link = [CADisplayLink displayLinkWithTarget:shape1 selector:@selector(moveDown)];
+    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+//    BJRect *bjrect = [BJRect initWithSize:det initWithX:0 initWithY:0 initWithView:self.view];
 //    [bjrect draw];
-//    [self.view.layer addSublayer:layer];
 }
 
 -(void)makeLine:(CGPoint) startPoint endWith:(CGPoint) endPoint {

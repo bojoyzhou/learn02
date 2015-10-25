@@ -1,5 +1,5 @@
 //
-//  Shape.h
+//  LineGround.h
 //  learn02
 //
 //  Created by 周明波 on 15/10/25.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface Shape : NSObject
+@interface LineGround : NSObject
 
++(LineGround *) initWithSize:(int)size initWithView:(UIView *)view;
 -(void)draw;
--(void)moveUp;
--(void)moveDown;
--(void)moveLeft;
--(void)moveRight;
 
 @end

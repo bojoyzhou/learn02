@@ -12,9 +12,11 @@
 @interface BJRect : NSObject
 
 @property int x, y, size;
+@property UIView *view;
 @property CAShapeLayer *layer;
 
-+(BJRect *)initWithSize: (int) size initWithX:(int) x initWithY:(int) y initWithLayer:(CAShapeLayer *)layer;
++(BJRect *)initWithSize: (int) size initWithX:(int) x initWithY:(int) y initWithView:(UIView *)view;
 -(void)draw;
+-(void)remove;
 
 @end

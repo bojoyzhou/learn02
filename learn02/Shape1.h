@@ -7,7 +7,14 @@
 //
 
 #import "Shape.h"
+#import "BJRect.h"
 
 @interface Shape1 : Shape
+
+@property int x, y;
+@property NSArray * rects;
+
+-(void) initWithX:(int)_x initWithY:(int)_y initWithSize:(int)size initWithView:(UIView *)view;
+-(void) draw;
 
 @end

@@ -18,6 +18,7 @@
 		F5F633C01BDCD2E700287F20 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F633BF1BDCD2E700287F20 /* Shape.m */; settings = {ASSET_TAGS = (); }; };
 		F5F633C31BDCD30300287F20 /* Shape1.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F633C21BDCD30300287F20 /* Shape1.m */; settings = {ASSET_TAGS = (); }; };
 		F5F633C61BDCD3F500287F20 /* BJRect.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F633C51BDCD3F500287F20 /* BJRect.m */; settings = {ASSET_TAGS = (); }; };
+		F5F633C91BDD190E00287F20 /* LineGround.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F633C81BDD190E00287F20 /* LineGround.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		F5F633C21BDCD30300287F20 /* Shape1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape1.m; sourceTree = "<group>"; };
 		F5F633C41BDCD3F500287F20 /* BJRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJRect.h; sourceTree = "<group>"; };
 		F5F633C51BDCD3F500287F20 /* BJRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJRect.m; sourceTree = "<group>"; };
+		F5F633C71BDD190E00287F20 /* LineGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGround.h; sourceTree = "<group>"; };
+		F5F633C81BDD190E00287F20 /* LineGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGround.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				F5F633C21BDCD30300287F20 /* Shape1.m */,
 				F5F633C41BDCD3F500287F20 /* BJRect.h */,
 				F5F633C51BDCD3F500287F20 /* BJRect.m */,
+				F5F633C71BDD190E00287F20 /* LineGround.h */,
+				F5F633C81BDD190E00287F20 /* LineGround.m */,
 			);
 			name = ShapeDefine;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				F5F633C31BDCD30300287F20 /* Shape1.m in Sources */,
 				F5F633A31BDC840200287F20 /* GameScene.m in Sources */,
 				F5F6339D1BDC840200287F20 /* main.m in Sources */,
+				F5F633C91BDD190E00287F20 /* LineGround.m in Sources */,
 				F5F633C61BDCD3F500287F20 /* BJRect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

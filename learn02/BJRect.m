@@ -10,19 +10,22 @@
 
 @implementation BJRect
 
-@synthesize x, y, size, layer;
+@synthesize x, y, size, view, layer;
 
-+(BJRect *)initWithSize: (int) size initWithX:(int) x initWithY:(int) y initWithLayer:(CAShapeLayer *)layer {
++(BJRect *)initWithSize: (int) size initWithX:(int) x initWithY:(int) y initWithView:(UIView *)view {
     BJRect * bjrect = [BJRect new];
-    bjrect.layer = layer;
+    bjrect.view = view;
     bjrect.size = size;
     bjrect.x = x;
     bjrect.y = y;
+    bjrect.layer = nil;
+    
+    NSLog(@"bjrect init [%d, %d, %d]", x, y, size);
     return bjrect;
 }
 
 -(void)draw {
-    
+    [self.layer removeFromSuperlayer];
     NSLog(@"bjrect draw");
     UIBezierPath * path = [UIBezierPath bezierPath];
     CGPoint startPoint = CGPointMake(self.x * self.size, self.y * self.size);
@@ -34,7 +37,20 @@
     endPoint = CGPointMake(startPoint.x, startPoint.y + self.size);
     [path addLineToPoint:endPoint];
     [path closePath];
-    self.layer.path = path.CGPath;
+    
+    
+    CAShapeLayer * _layer = [CAShapeLayer layer];
+    _layer.fillColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2].CGColor;
+    _layer.strokeColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5].CGColor;
+    _layer.frame = self.view.frame;
+    _layer.lineWidth = 1;
+    
+    _layer.path = path.CGPath;
+    self.layer = _layer;
+    [self.view.layer addSublayer:_layer];
 }
 
+-(void)remove {
+    [self.layer removeFromSuperlayer];
+}
 @end
