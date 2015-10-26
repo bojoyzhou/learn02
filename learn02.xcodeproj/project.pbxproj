@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F59456351BDE50A300CBE606 /* ShapeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F59456341BDE50A300CBE606 /* ShapeFactory.m */; settings = {ASSET_TAGS = (); }; };
+		F59456381BDE679D00CBE606 /* Shape2.m in Sources */ = {isa = PBXBuildFile; fileRef = F59456371BDE679D00CBE606 /* Shape2.m */; settings = {ASSET_TAGS = (); }; };
+		F594563B1BDE67CC00CBE606 /* Shape3.m in Sources */ = {isa = PBXBuildFile; fileRef = F594563A1BDE67CC00CBE606 /* Shape3.m */; settings = {ASSET_TAGS = (); }; };
+		F594563E1BDE67F300CBE606 /* Shape4.m in Sources */ = {isa = PBXBuildFile; fileRef = F594563D1BDE67F300CBE606 /* Shape4.m */; settings = {ASSET_TAGS = (); }; };
+		F59456411BDE681F00CBE606 /* Shape5.m in Sources */ = {isa = PBXBuildFile; fileRef = F59456401BDE681F00CBE606 /* Shape5.m */; settings = {ASSET_TAGS = (); }; };
 		F5F6339D1BDC840200287F20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F6339C1BDC840200287F20 /* main.m */; };
 		F5F633A01BDC840200287F20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F6339F1BDC840200287F20 /* AppDelegate.m */; };
 		F5F633A31BDC840200287F20 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F633A21BDC840200287F20 /* GameScene.m */; };
@@ -22,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F59456331BDE50A300CBE606 /* ShapeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeFactory.h; sourceTree = "<group>"; };
+		F59456341BDE50A300CBE606 /* ShapeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeFactory.m; sourceTree = "<group>"; };
+		F59456361BDE679D00CBE606 /* Shape2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape2.h; sourceTree = "<group>"; };
+		F59456371BDE679D00CBE606 /* Shape2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape2.m; sourceTree = "<group>"; };
+		F59456391BDE67CC00CBE606 /* Shape3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape3.h; sourceTree = "<group>"; };
+		F594563A1BDE67CC00CBE606 /* Shape3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape3.m; sourceTree = "<group>"; };
+		F594563C1BDE67F300CBE606 /* Shape4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape4.h; sourceTree = "<group>"; };
+		F594563D1BDE67F300CBE606 /* Shape4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape4.m; sourceTree = "<group>"; };
+		F594563F1BDE681F00CBE606 /* Shape5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape5.h; sourceTree = "<group>"; };
+		F59456401BDE681F00CBE606 /* Shape5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape5.m; sourceTree = "<group>"; };
 		F5F633981BDC840200287F20 /* learn02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learn02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F6339C1BDC840200287F20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5F6339E1BDC840200287F20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +126,16 @@
 				F5F633C51BDCD3F500287F20 /* BJRect.m */,
 				F5F633C71BDD190E00287F20 /* LineGround.h */,
 				F5F633C81BDD190E00287F20 /* LineGround.m */,
+				F59456331BDE50A300CBE606 /* ShapeFactory.h */,
+				F59456341BDE50A300CBE606 /* ShapeFactory.m */,
+				F59456361BDE679D00CBE606 /* Shape2.h */,
+				F59456371BDE679D00CBE606 /* Shape2.m */,
+				F59456391BDE67CC00CBE606 /* Shape3.h */,
+				F594563A1BDE67CC00CBE606 /* Shape3.m */,
+				F594563C1BDE67F300CBE606 /* Shape4.h */,
+				F594563D1BDE67F300CBE606 /* Shape4.m */,
+				F594563F1BDE681F00CBE606 /* Shape5.h */,
+				F59456401BDE681F00CBE606 /* Shape5.m */,
 			);
 			name = ShapeDefine;
 			sourceTree = "<group>";
@@ -187,12 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594563E1BDE67F300CBE606 /* Shape4.m in Sources */,
 				F5F633A81BDC840200287F20 /* GameViewController.m in Sources */,
+				F59456351BDE50A300CBE606 /* ShapeFactory.m in Sources */,
+				F59456381BDE679D00CBE606 /* Shape2.m in Sources */,
 				F5F633A01BDC840200287F20 /* AppDelegate.m in Sources */,
 				F5F633C01BDCD2E700287F20 /* Shape.m in Sources */,
+				F59456411BDE681F00CBE606 /* Shape5.m in Sources */,
 				F5F633C31BDCD30300287F20 /* Shape1.m in Sources */,
 				F5F633A31BDC840200287F20 /* GameScene.m in Sources */,
 				F5F6339D1BDC840200287F20 /* main.m in Sources */,
+				F594563B1BDE67CC00CBE606 /* Shape3.m in Sources */,
 				F5F633C91BDD190E00287F20 /* LineGround.m in Sources */,
 				F5F633C61BDCD3F500287F20 /* BJRect.m in Sources */,
 			);
@@ -341,6 +371,7 @@
 				F5F633B61BDC840200287F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

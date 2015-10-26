@@ -11,9 +11,9 @@
 
 @interface BJRect : NSObject
 
-@property int x, y, size;
-@property UIView *view;
-@property CAShapeLayer *layer;
+@property int m_x, m_y, m_size;
+@property UIView *m_view;
+@property CAShapeLayer *m_layer;
 
 +(BJRect *)initWithSize: (int) size initWithX:(int) x initWithY:(int) y initWithView:(UIView *)view;
 -(void)draw;

@@ -7,15 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BJRect.h"
 
 @interface Shape : NSObject
 
-@property NSArray * rects;
-
+@property int m_x, m_y, m_status;
+@property NSArray * m_rects;
+-(void)initWithX:(int)x initWithY:(int)y initWithSize:(int)size initWithView:(UIView *)view;
+-(void)initWithSize:(int)size initWithView:(UIView *)view;
 -(void)draw;
--(void)moveUp;
--(void)moveDown;
--(void)moveLeft;
--(void)moveRight;
+-(BOOL)moveUp;
+-(BOOL)moveDown;
+-(BOOL)moveLeft;
+-(BOOL)moveRight;
+-(BOOL)moveToX:(int)x moveToY:(int)y;
+-(BOOL)deformation;
 
 @end

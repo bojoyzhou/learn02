@@ -12,11 +12,11 @@
 
 @interface LineGround : NSObject
 
-@property int size, width, height;
-@property UIView * view;
+@property UIView * m_view;
 
 +(LineGround *) initWithSize:(int)size initWithView:(UIView *)view initWithWidth:(int)width initWithHeight:(int)height;
-+(BOOL) canLocate:(Shape *)r;
++(BOOL) canLocate:(Shape *)shape;
++(BOOL) locateShape:(Shape *)shape;
 -(void)draw;
 
 @end
